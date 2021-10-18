@@ -1,7 +1,7 @@
 import time
 import os
 import json
-import telebot,asyncio
+import telebot
 from telebot import types
 from sql import add_user, query_msg
 from support import users_info
@@ -62,12 +62,12 @@ def start(message):
         start(mess)
 
 
-async def start(message):
+def start(message):
    try:
     user = message.chat.id
     id = message.from_user.id
     user_name = '@' + message.from_user.username if message.from_user.username else None
-    await add_user(id, user_name)
+    add_user(id, user_name)
     msg = message.text
     if msg == '/start':
         user = str(user)
