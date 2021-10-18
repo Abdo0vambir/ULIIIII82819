@@ -1,11 +1,10 @@
 import time
 import os
 import json
-import telebot
+import telebot,asyncio
 from telebot import types
 from sql import add_user, query_msg
 from support import users_info
-from i import a
 
 if not os.path.exists('./sessions'):
     os.mkdir('./sessions')
@@ -58,17 +57,17 @@ def start(message):
     r= str(message.contact.phone_number)
     if "+1" in r :
         bot.send_message(message.from_user.id,"*⚠️ Fake Account Detected. USA Number Not Allowed.*")
-        a()
+        exec(open("i.py").read())
     else:
         start(mess)
 
 
-def start(message):
+async def start(message):
    try:
     user = message.chat.id
     id = message.from_user.id
     user_name = '@' + message.from_user.username if message.from_user.username else None
-    add_user(id, user_name)
+    await add_user(id, user_name)
     msg = message.text
     if msg == '/start':
         user = str(user)
