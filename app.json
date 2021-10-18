@@ -19,6 +19,22 @@
         "BOT_TOKEN": {
             "description": "Your bot token, as a string.",
             "value": "",
+            "required": true
+        },
+        "UPDATES_CHANNEL": {
+            "description": "UPDATES_CHANNEL ",
+            "value": "",
+            "required": true
+        },
+        "APP_ID": {
+            "description": "Get from https://my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get from https://my.telegram.org",
+            "value": "",
+            "required": true
         }
     }
 }
