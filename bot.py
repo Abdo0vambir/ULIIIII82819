@@ -14,7 +14,7 @@ CHANNELS = ["@InducedBots"] #add channels to be checked here in the format - ["C
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 5 #Put daily bonus amount here!
 Mini_Withdraw = 1  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 50 #add per refer bonus here
+Per_Refer = 100 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
