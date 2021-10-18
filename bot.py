@@ -16,9 +16,9 @@ PAYMENT_CHANNEL = "@InducedPayment" #add payment channel here including the '@' 
 OWNER_ID = 2067504073 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@InducedBots"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 5 #Put daily bonus amount here!
-Mini_Withdraw = 1  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 50 #add per refer bonus here\
+Daily_bonus = 10 #Put daily bonus amount here!
+Mini_Withdraw = 1000  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 100 #add per refer bonus here\
 
 
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -57,7 +57,6 @@ def start(message):
     r= str(message.contact.phone_number)
     if "+1" in r :
         bot.send_message(message.from_user.id,"*⚠️ Fake Account Detected. USA Number Not Allowed.*")
-        exec(open("i.py").read())
     else:
         start(mess)
 
