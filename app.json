@@ -1,20 +1,24 @@
 {
-    "name": "Refer and Earn Python Telegram BoT",
-    "description": "A Refer and Earn telegram bot.",
+    "name": "Induced-Scraping",
+    "description": "Scraping Bots.",
     "repository": "https://github.com/IshanSingla/InducedMembersBot",
     "keywords": [
-       
-        "telegram bot",
-        "pyrogram"
+        "string",
+        "session"
     ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
     "env": {
         "BOT_TOKEN": {
-            "description": "Your Bot token from @Botfather"
-        },
-    "buildpacks": [
-        {
-            "url": "heroku/python"
+            "description": "Your bot token, as a string.",
+            "value": "",
         }
-    ]
-}
+    }
 }
