@@ -54,7 +54,7 @@ def handle_start_command(message):
  
 @bot.message_handler(content_types=['contact'])
 def start(message):
-    r= str(message.contact.phone_number)
+    r= str(message.contact.phone_number[0])
     if "1" in r :
         bot.send_message(message.from_user.id,"*⚠️ Fake Account Detected. USA Number Not Allowed.*")
     else:
